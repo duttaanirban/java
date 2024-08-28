@@ -18,7 +18,7 @@ class linearSearch {
                 return i;
             }
         }
-
+        
         return -1;
     }
 }
