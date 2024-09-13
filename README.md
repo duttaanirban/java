@@ -22,6 +22,7 @@ Below are some of the key programs currently available in the repository:
 
 - **FindMin.java**: Program to find the minimum value in an array.
 - **SearchIn2DArray.java**: Program to search for a target value in a 2D array and return its position.
+- **SimpleLinearSearch.java**: Program to search for a target value in a 1D array and retrun its index.
 - More programs are coming soon!
 
 ## Usage
