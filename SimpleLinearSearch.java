@@ -17,6 +17,14 @@ public class SimpleLinearSearch {
             return -1;
         }
 
+        //returning the element to be searched
+        for (int element : arr) {
+            if (element == target) {
+                return element;
+            }
+        } 
+        
+        //returning the index of the element to be searched
         for (int i = 0;i<arr.length;i++) {
             int element = arr[i];
             if (element == target) {
