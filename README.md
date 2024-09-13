@@ -1,8 +1,4 @@
-Here’s a basic template for your `README.md` file for your `javaPrograms` repository. You can customize it according to your needs:
-
----
-
-# javaPrograms
+# JavaPrograms
 
 A collection of Java programs covering various topics such as arrays, searching algorithms, sorting, and more. This repository is designed to help understand core Java concepts with practical examples.
 
@@ -60,10 +56,3 @@ We welcome contributions! Here's how you can contribute:
 - Ensure that the code is properly formatted and commented.
 - Add relevant test cases where applicable.
 - Follow Java naming conventions.
-
-## License
-This repository is licensed under the MIT License. You are free to use, modify, and distribute this code.
-
----
-
-This README serves as an introduction to your repository, making it easy for others to navigate and contribute. You can modify the sections according to the specific needs of your repository. Let me know if you'd like to add more details or change anything!
