@@ -14,10 +14,10 @@ public class SearchIn2DArray {
         };
         int[] ans = search(arr, target);
         System.out.println(Arrays.toString(ans));
+        System.out.println(max(arr));
         sc.close();
     }
     
-
     static int[] search(int[][] arr, int target) {
         for (int row = 0; row < arr.length; row++) {
             for (int col = 0; col < arr[row].length; col++) {
@@ -27,5 +27,18 @@ public class SearchIn2DArray {
             } 
         }
         return new int[]{-1, -1};
+    }
+
+    //returning the Max Value from the 2D array
+    static int max(int[][] arr) {
+        int max = Integer.MIN_VALUE;
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr[row].length; col++) {
+                if( arr[row][col] > max) {
+                    max = arr[row][col];
+                }
+            } 
+        }
+        return max;
     }
 }
