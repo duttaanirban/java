@@ -2,8 +2,6 @@ public class EvenDigits {
     public static void main(String[] args) {
         int[] nums = {12, 345, 2, 6, 7896};
         System.out.println(findNum(nums));
-        
-        System.out.println(digits(54367));
     
     }
 
@@ -18,7 +16,7 @@ public class EvenDigits {
     }
 
     static boolean even(int num) {
-        int numberOfDigits = digits(num);
+        int numberOfDigits = digits2(num);
         if (numberOfDigits % 2 == 0) {
             return true;
         }
@@ -26,6 +24,8 @@ public class EvenDigits {
 
     }
 
+
+    //Method1
     static int digits(int num) {
         int count = 0;
         while (num > 0) {
@@ -34,6 +34,12 @@ public class EvenDigits {
         }
         
         return count;
+    }
+
+    //Method2
+    static int digits2(int num) {
+        
+        return (int)(Math.log10(num)) + 1;
     }
     
     
