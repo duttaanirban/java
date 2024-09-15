@@ -1,16 +1,22 @@
+import java .util.Scanner;
+
+
 public class BinarySearch {
     public static void main(String[] args) {
         // Sample sorted array
         int[] arr = {-10, -4, 4, 6, 8, 9, 10, 12, 14, 15, 17, 19};
         
-        // The target value we want to find in the array
-        int target = 15;
+        // The target value we want to find in the array\
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the target element:");
+        int target = sc.nextInt();
 
         // Call the binary search method and store the result in 'ans'
         int ans = binarysearch(arr, target);
 
         // Output the result
         System.out.println("index of " + target + " at " + ans);
+        sc.close();
     }
 
     // Method to perform binary search on a sorted array
