@@ -40,6 +40,7 @@ public class BinarySearch {
                 // Narrow the search to the right half
                 start = mid + 1;
             }
+            
             // If the target is equal to the middle element, return the index
             
             else {
