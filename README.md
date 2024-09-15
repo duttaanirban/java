@@ -25,6 +25,7 @@ Below are some of the key programs currently available in the repository:
 - **SimpleLinearSearch.java**: Program to search for a target value in a 1D array and retrun its index.
 - **EvenDigits.java**: Program to count the number of even digit numbers in a array.
 - **MaxWealth.java**: Program to This is a simple Java program that calculates the maximum wealth of a customer based on their bank account balances across multiple banks. The program takes a 2D array where each row represents a customer's accounts in various banks, and each value in the row represents the balance in one of the customer's accounts.
+- **BinarySearch**: programs related to binary search.
 - More programs are coming soon!
 
 ## Usage
