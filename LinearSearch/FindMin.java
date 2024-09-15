@@ -3,7 +3,6 @@ public class FindMin {
         int [] arr = {18, 12, -7, 3, 14, 28};
         System.out.println(min(arr));
     }
-    
     //Min value from the array
     static int min(int[] arr) {
         int ans = arr[0];
