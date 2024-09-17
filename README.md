@@ -11,7 +11,6 @@ A collection of Java programs covering various topics such as arrays, searching 
 
 ## Introduction
 This repository contains a variety of Java programs that demonstrate different concepts, algorithms, and use cases. The programs range from simple beginner-friendly exercises to more complex solutions, offering examples for:
-- Arrays
 - Searching algorithms
 - Sorting algorithms
 - Recursion
