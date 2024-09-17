@@ -38,6 +38,7 @@ public class FirstAndLastElement {
         int start = 0;
         int end = nums.length - 1;
 
+        
         // Perform binary search
         while (start <= end) {
             // Calculate the middle index to divide the search space
