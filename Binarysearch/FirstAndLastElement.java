@@ -25,7 +25,7 @@ public class FirstAndLastElement {
         ans[0] = start;
         ans[1] = end;
 
-        // Return the result array
+        // Return the result array 
         return ans;
     }
 
@@ -69,6 +69,8 @@ public class FirstAndLastElement {
         return ans;
     }
 }
+
+
 
     
 
