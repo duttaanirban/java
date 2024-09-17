@@ -1,11 +1,15 @@
 public class OrderAgnosticsBS {
     public static void main(String[] args) {
-        int[] arr = {-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 89};
+        //Ascending order
+        //int[] arr = {-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 89};
+        
+        //Descending Order
+        int [] arr =  {99, 89, 79, 80, 45, 36, 22, 11, 6, 2, -1, -5,-60};
         int target = 22;
         System.out.println(OrderAgnosticsBs(arr, target));
     }
 
-static int OrderAgnosticsBs(int[] arr, int target) {
+    static int OrderAgnosticsBs(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
 
