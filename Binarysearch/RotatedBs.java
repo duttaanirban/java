@@ -1,6 +1,8 @@
 public class RotatedBs {
     public static void main(String[] args) {
         int[] arr = {4, 5, 6, 7, 0, 1, 2};
+        // array with duplicate elements
+        //int[] arr = {2,2,2,2,2,9};
         int target = 7;
         int ans = search(arr, target);
         System.out.println("Value is :" +arr[ans] + " with the index :" +ans);
@@ -45,14 +47,35 @@ public class RotatedBs {
                 return mid - 1;
             }
 
-            // Adjust the search range
-            if (arr[mid] <= arr[start]) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
-            }
-        }
+            // // Adjust the search range
+            // if (arr[mid] <= arr[start]) {
+            //     end = mid - 1;
+            // } else {
+            //     start = mid + 1;
+            // }
 
+            //if elements at middle, start, end are equal then just skip the duplicates
+            if ( arr[start] == arr[mid] && arr[mid] == arr[end]) {
+                //skip the duplicates
+                //check if start is pivot
+                if (start < end && arr[start] > arr[start + 1]) {
+                    return start;
+                }
+                start++;
+
+                //check whether end is pivot
+                if (end > start && arr[end] < arr[end - 1]) {
+                    return end - 1;
+                }
+                end--;
+            }
+             else if (arr[start] < arr[mid] || (arr[start] == arr[mid] && arr[end] < arr[mid])) {
+                start = mid + 1;
+             }
+             else {
+                end = mid - 1;
+             }
+        }
         // No pivot found, array is not rotated
         return -1;
     }
