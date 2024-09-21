@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class SearchInSorted2DMatrix {
+public class SearchInSorted2DMatrixNotFullySorted {
     public static void main(String[] args) {
         int[][] arr = {
             {1, 4, 7, 11, 15},
