@@ -18,9 +18,6 @@ public class firstmissingpositive {
         return nums.length + 1;
     }
 
-
-    
-
     static void swap(int[] nums, int first, int second) {
         int temp = nums[first];
         nums[first] = nums[second];
