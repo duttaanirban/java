@@ -14,6 +14,8 @@ public class allmissingnumbers {
             }
         }
 
+        
+
         // Find missing numbers
         List<Integer> ans = new ArrayList<>();
         for (int index = 0; index < nums.length; index++) {
