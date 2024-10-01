@@ -41,5 +41,3 @@ public class firstmissingpositive {
         System.out.println("The first missing positive integer is: " + res);
     }
 }
-
-
