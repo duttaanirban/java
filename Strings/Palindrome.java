@@ -11,6 +11,7 @@ public class Palindrome {
 
         // Check if the input string is a palindrome and print the result
         System.out.println("Is the string a palindrome? " + isPalindrome2(str));
+        scanner.close();
     }
 
     static boolean isPalindrome(String str) {
