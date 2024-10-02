@@ -1,4 +1,5 @@
-public class pattern8 {
+public class pattern9 {
+    
     public static void main(String[] args) {
         ptrn(5);
     }
@@ -25,5 +26,4 @@ public class pattern8 {
             System.out.println();
         }
     }
-    
 }
