@@ -4,7 +4,7 @@ public class binarySearch {
         int target = 4;
         System.out.println(search(arr, target, 0, arr.length - 1));
     }
-
+    
     static int search(int[] arr, int target, int s, int e) {
         
         if (s>e) {
