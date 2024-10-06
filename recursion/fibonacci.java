@@ -1,6 +1,6 @@
 public class fibonacci {
     public static void main(String[] args) {
-        int ans = fibo(6);
+        int ans = fibo(5);
         System.out.println(ans);
     }
 
