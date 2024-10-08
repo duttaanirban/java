@@ -15,5 +15,6 @@ public class vote {
         {
             System.out.println("You are not eligible for vote.");
         }
+        sc.close();
     }
 }
