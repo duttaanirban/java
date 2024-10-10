@@ -14,13 +14,12 @@ public class GradeSys {
             totalMarks += sc.nextInt();
         }
 
-        sc.close();
-
         System.out.println("Total Marks: " + totalMarks);
         // Each subject is of 100 Marks
         percentage = (totalMarks / (count * 100)) * 100;
 
         System.out.println("Percentage: " + percentage + "%");
+        sc.close();
 
         switch ((int) percentage / 10) {
         case 9:
