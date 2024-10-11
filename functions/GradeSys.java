@@ -5,6 +5,7 @@ public class GradeSys {
         int count, i;
         float totalMarks = 0, percentage;
         Scanner sc = new Scanner(System.in);
+        sc.close();
 
         System.out.println("Enter Number of Subjects:");
         count = sc.nextInt();
@@ -19,7 +20,6 @@ public class GradeSys {
         percentage = (totalMarks / (count * 100)) * 100;
 
         System.out.println("Percentage: " + percentage + "%");
-        sc.close();
 
         switch ((int) percentage / 10) {
         case 9:
