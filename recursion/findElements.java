@@ -1,4 +1,4 @@
-package arrays;
+
 import java.util.ArrayList;
 public class findElements {
     public static void main(String[] args) {
