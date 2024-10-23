@@ -1,6 +1,6 @@
 public class triangle {
     public static void main(String[] args) {
-        pattern2(4, 0);
+        pattern(4, 0);
     }
 
     static void pattern(int row, int col) {
@@ -31,4 +31,5 @@ public class triangle {
             System.out.println();
         }
     }
+
 }
