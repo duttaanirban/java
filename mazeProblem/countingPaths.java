@@ -1,7 +1,10 @@
+
+import java.util.ArrayList;
+
 public class countingPaths {
     public static void main(String[] args) {
         System.out.println(count(3, 3));
-        path("", 3, 3); // Call the path function to print all paths from (3, 3) to (1, 1)
+        System.out.println(path("", 3, 3)); // Call the path function to print all paths from (3, 3) to (1, 1)
     }
 
     static int count(int r, int c) {
@@ -14,17 +17,21 @@ public class countingPaths {
         return left + right; // Sum of paths from left and top cells
     }
 
-    static void path(String p, int r, int c) {
+    static ArrayList<String> path(String p, int r, int c) {
         if (r == 1 && c == 1) {
-            System.out.println(p); // Print the path when reaching the destination
-            return;
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p); // Base case: if we reach (1, 1), add the path to the list
+            return list; // Print the path
         }
 
+        ArrayList<String> list = new ArrayList<>();
+        
         if (r > 1) {
-            path(p + "D", r - 1, c); // Move down
+            list.addAll(path(p + "D", r - 1, c)); // Move down
         }
         if (c > 1) {
-            path(p + "R", r, c - 1); // Move right
+            list.addAll(path(p + "R", r, c - 1)); // Move right
         }
+        return list; // Return the list of paths
     }
 }
