@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class countingPaths {
     public static void main(String[] args) {
-        System.out.println(count(3, 3));
-        System.out.println(path("", 3, 3)); // Call the path function to print all paths from (3, 3) to (1, 1)
+        //System.out.println(count(3, 3));
+        System.out.println(pathWithDiagonal("", 3, 3)); // Call the path function to print all paths from (3, 3) to (1, 1)
     }
 
     static int count(int r, int c) {
@@ -31,6 +31,28 @@ public class countingPaths {
         }
         if (c > 1) {
             list.addAll(path(p + "R", r, c - 1)); // Move right
+        }
+        return list; // Return the list of paths
+    }
+
+    static ArrayList<String> pathWithDiagonal(String p, int r, int c) {
+        if (r == 1 && c == 1) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p); // Base case: if we reach (1, 1), add the path to the list
+            return list; // Print the path
+        }
+
+        ArrayList<String> list = new ArrayList<>();
+        
+        if (r > 1 && c > 1) {
+            list.addAll(pathWithDiagonal(p + "D", r - 1, c - 1)); // Move diagonally down-right
+        }
+
+        if (r > 1) {
+            list.addAll(pathWithDiagonal(p + "V", r - 1, c)); // Move down
+        }
+        if (c > 1) {
+            list.addAll(pathWithDiagonal(p + "R", r, c - 1)); // Move right
         }
         return list; // Return the list of paths
     }
