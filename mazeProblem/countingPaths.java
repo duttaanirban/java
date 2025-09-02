@@ -90,5 +90,6 @@ public class countingPaths {
         // Unmark the cell for other paths
         maze[r][c] = true;
     }
+
 }
 
