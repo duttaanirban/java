@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class AllPaths {
     public static void main(String[] args) {
         boolean[][] board = {
@@ -6,7 +8,8 @@ public class AllPaths {
             {true, true, true}
         };
 
-        allpaths("", board, 0, 0);
+        //allpaths("", board, 0, 0);
+        allpathsPrint("", board, 0, 0, new int[board.length][board[0].length], 1);
     }
 
     static void allpaths(String p, boolean[][] maze, int r, int c) {
@@ -42,4 +45,44 @@ public class AllPaths {
         // Unmark the cell for other paths
         maze[r][c] = true;
     }
+
+    static void allpathsPrint(String p, boolean[][] maze, int r, int c, int[][] path, int step) {
+        if (r == maze.length - 1 && c == maze[0].length - 1) {
+            for (int[] arr : path) {
+               System.out.println(Arrays.toString(arr));
+            }
+            return;
+        }
+
+        if (!maze[r][c]) {
+            return; // If the cell is blocked, return
+        }
+
+        // Mark the cell as visited
+        maze[r][c] = false;
+
+        path[r][c] = step;
+
+        // Move down
+        if (r < maze.length - 1) {
+            allpathsPrint(p + "D", maze, r + 1, c, path, step + 1);
+        }
+        // Move right
+        if (c < maze[0].length - 1) {
+            allpathsPrint(p + "R", maze, r, c + 1, path, step + 1);
+        }
+        // Move up
+        if (r > 0) {
+            allpathsPrint(p + "U", maze, r - 1, c, path, step + 1);
+        }
+        // Move left
+        if (c > 0) {
+            allpathsPrint(p + "L", maze, r, c - 1, path, step + 1);
+        }
+
+        // Unmark the cell for other paths
+        maze[r][c] = true;
+        path[r][c] = 0;
+    }
+
 }
