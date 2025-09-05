@@ -48,9 +48,12 @@ public class AllPaths {
 
     static void allpathsPrint(String p, boolean[][] maze, int r, int c, int[][] path, int step) {
         if (r == maze.length - 1 && c == maze[0].length - 1) {
+            path[r][c] = step;
             for (int[] arr : path) {
                System.out.println(Arrays.toString(arr));
             }
+            System.out.println(p); // Print the path when reaching the bottom-right corner
+            System.out.println();
             return;
         }
 
